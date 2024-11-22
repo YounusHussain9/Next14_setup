@@ -1,3 +1,9 @@
+import SignupForm from "./components/providers/Forms/SignupForm";
+
 export default function Home() {
-  return <> Test</>;
+  return (
+    <>
+      <SignupForm />
+    </>
+  );
 }
