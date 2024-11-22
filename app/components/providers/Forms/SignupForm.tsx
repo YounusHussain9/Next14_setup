@@ -7,10 +7,13 @@ import Link from "next/link";
 import { useForm, Controller } from "react-hook-form";
 import { signUpFormSchema } from "@/schemas/SignupSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useSignup } from "@/hooks/useSignup";
 
 const orgs = [{ name: "Facebook" }, { name: "Google" }, { name: "Microsoft" }, { name: "Apple" }, { name: "Amazon" }];
 
 const SignupForm = () => {
+  // eslint-disable-next-line no-unused-vars
+  const { data, isLoading, error } = useSignup();
   const {
     register,
     handleSubmit,
